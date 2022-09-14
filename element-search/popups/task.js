@@ -15,5 +15,10 @@ function successWnd() {
     successWnd.classList.add("modal_active");
 }
 
-closeItem.onclick = closeWnd;
-mainBtn.onclick = successWnd;
+for (i = 0; i < closeItem.length; i++) {
+    closeItem.item(i).onclick = closeWnd;
+}
+
+for (i = 0; i < mainBtn.length; i++) {
+    mainBtn.item(i).onclick = closeWnd;
+}
