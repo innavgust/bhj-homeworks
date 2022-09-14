@@ -4,7 +4,7 @@ let sliderItems = Array.from(sliders);
 let prevArrow = document.getElementsByClassName("slider__arrow_prev");
 let nextArrow = document.getElementsByClassName("slider__arrow_next");
 
-function Next() {
+function next() {
     let activeSlide = document.getElementsByClassName("slider__item_active");
     let indx = sliderItems.findIndex(item => item == activeSlide);
     sliders.classList.remove("slider__item_active");
@@ -15,7 +15,7 @@ function Next() {
     }
 }
 
-function Prev() {
+function prev() {
     let activeSlide = document.getElementsByClassName("slider__item_active");
     let indx = sliderItems.findIndex(item => item == activeSlide);
     sliders.classList.remove("slider__item_active");
@@ -26,5 +26,5 @@ function Prev() {
     }
 }
 
-prevArrow.onclick = Prev;
-nextArrow.onclick = Next;
+prevArrow.onclick = prev;
+nextArrow.onclick = next;

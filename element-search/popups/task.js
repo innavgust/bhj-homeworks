@@ -6,14 +6,14 @@ const mainBtn = document.getElementsByClassName("btn_danger");
 
 mainWnd.classList.add("modal_active");
 
-function CloseWnd() {
+function closeWnd() {
     mainWnd.classList.remove("modal_active");
 }
 
-function SuccessWnd() {
+function successWnd() {
     mainWnd.classList.remove("modal_active");
     successWnd.classList.add("modal_active");
 }
 
-closeItem.onclick = CloseWnd;
-mainBtn.onclick = SuccessWnd;
+closeItem.onclick = closeWnd;
+mainBtn.onclick = successWnd;
