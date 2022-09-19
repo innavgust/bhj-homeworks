@@ -5,8 +5,7 @@ let prevArrow = document.getElementsByClassName("slider__arrow_prev");
 let nextArrow = document.getElementsByClassName("slider__arrow_next");
 
 function next() {
-    let activeSlide = document.getElementsByClassName("slider__item_active");
-    let indx = sliderItems.findIndex(item => item == activeSlide);
+    let indx = sliderItems.findIndex(item => item.classList == "slider__item slider__item_active");
     sliders.classList.remove("slider__item_active");
     if (indx == (sliderItems.length - 1)) {
         sliders.item(0).classList.add("slider__item_active");
@@ -16,8 +15,7 @@ function next() {
 }
 
 function prev() {
-    let activeSlide = document.getElementsByClassName("slider__item_active");
-    let indx = sliderItems.findIndex(item => item == activeSlide);
+    let indx = sliderItems.findIndex(item => item.classList == "slider__item slider__item_active");
     sliders.classList.remove("slider__item_active");
     if (indx == 0) {
         sliders.item(sliderItems.length).classList.add("slider__item_active");
@@ -26,5 +24,10 @@ function prev() {
     }
 }
 
-prevArrow.onclick = prev;
-nextArrow.onclick = next;
+for (let i = 0; i < prevArrow.length; i++) {
+    prevArrow.item(i).onclick = prev;
+}
+
+for (let i = 0; i < nextArrow.length; i++) {
+    nextArrow.item(i).onclick = next;
+}
