@@ -16,7 +16,7 @@ function next() {
 
 function prev() {
     let indx = sliderItems.findIndex(item => item.classList == "slider__item slider__item_active");
-    sliders.classList.remove("slider__item_active");
+    sliders.item(indx).classList.remove("slider__item_active");
     if (indx == 0) {
         sliders.item(sliderItems.length).classList.add("slider__item_active");
     } else{
@@ -24,10 +24,7 @@ function prev() {
     }
 }
 
-for (let i = 0; i < prevArrow.length; i++) {
-    prevArrow.item(i).onclick = prev;
-}
 
-for (let i = 0; i < nextArrow.length; i++) {
-    nextArrow.item(i).onclick = next;
-}
+prevArrow.item(0).onclick = prev;
+
+nextArrow.item(0).onclick = next;

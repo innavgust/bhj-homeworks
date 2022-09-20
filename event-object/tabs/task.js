@@ -20,11 +20,11 @@ function tabContClose(tabCont) {
 tabs.addEventListener("click", function (e) {let activeTab = e.target;});
 
 for (let i = 0; i < tabs.length; i++) {
-    if (tabs(i) == activeTab) {
-        tabs(i).tabAct;
-        tabsContent(i).tabContAct;
+    if (tabs.item(i) == activeTab) {
+        tabs.item(i).tabAct;
+        tabsContent.item(i).tabContAct;
     } else {
-        tabs(i).tabClose;
-        tabsContent(i).tabContClose;
+        tabs.item(i).tabClose;
+        tabsContent.item(i).tabContClose;
     }
 }

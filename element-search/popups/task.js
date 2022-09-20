@@ -20,5 +20,5 @@ for (let i = 0; i < closeItem.length; i++) {
 }
 
 for (let i = 0; i < mainBtn.length; i++) {
-    mainBtn.item(i).onclick = closeWnd;
+    mainBtn.item(i).onclick = sucWnd;
 }
