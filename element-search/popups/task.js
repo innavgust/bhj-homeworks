@@ -7,7 +7,7 @@ const mainBtn = document.getElementsByClassName("btn_danger");
 mainWnd.classList.add("modal_active");
 
 function closeWnd() {
-    mainWnd.classList.remove("modal_active");
+    this.closest.classList.remove("modal_active");
 }
 
 function sucWnd() {
