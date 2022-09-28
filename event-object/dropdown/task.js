@@ -4,11 +4,11 @@ let dropdownLinks = document.getElementsByClassName("dropdown__link");
 
 
 function dropdownOpen() {
-    dropdownList.classList.add("dropdown__list_active");
+    dropdownList.item(0).classList.add("dropdown__list_active");
 }
 
 function dropdownClose() {
-    dropdownList.classList.remove("dropdown__list_active");
+    dropdownList.item(0).classList.remove("dropdown__list_active");
 }
 
 if (dropdownList.classList.contains("dropdown__list_active")) {

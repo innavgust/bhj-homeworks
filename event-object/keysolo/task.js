@@ -17,8 +17,8 @@ class Game {
   }
 
   registerEvents() {
-    
-    document.addEventListener('keydown', function(event) {let letter = event.code;});
+    let letter;
+    document.addEventListener('keydown', function(event) {letter = event.code;});
     if (this.currentSymbol == String.fromCharCode(letter)) {
       this.success();
     } else {

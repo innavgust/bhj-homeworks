@@ -17,7 +17,8 @@ function tabContClose(tabCont) {
     tabCont.classList.remove("tab__content_active");
 }
 
-tabs.addEventListener("click", function (e) {let activeTab = e.target;});
+let activeTab;
+tabs.addEventListener("click", function (e) {activeTab = e.target;});
 
 for (let i = 0; i < tabs.length; i++) {
     if (tabs.item(i) == activeTab) {
