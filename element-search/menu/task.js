@@ -1,7 +1,11 @@
 let menuElem = document.getElementsByClassName("menu__link");
 
-for (let i = 0; i < menuElem.length; i++) {
-    if (menuElem.item(i).nextSibling !== null) {
-        menuElem.item(i).nextSibling.toggle('menu_active');
-    } 
+function menuActive() {
+    if (menuElem.item(i).nextElementSibling !== null) {
+        menuElem.item(i).nextElementSibling.classList.toggle('menu_active');
+    };
+}
+
+for (let i =0; i < menuElem.length; i++) {
+    menuElem.item(i).onclick = menuActive;
 }
