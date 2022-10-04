@@ -13,8 +13,8 @@ let i = 0;
     
 function adsRotator() {
     adsRemove(ads.item(i));
-    if (ads.item(i).nextSibling !== null) {
-        adsAdd(ads.item(i).nextSibling);
+    if (ads.item(i).nextElementSibling !== null) {
+        adsAdd(ads.item(i).nextElementSibling);
         i++;
     } else {
         i = 0;
